@@ -16,6 +16,7 @@ header {
   margin-top: 1px;
   text-align: center;
   margin-bottom: 10px;
+  z-index: -1;
 }
 
 .nav-link {
@@ -46,13 +47,16 @@ img {
 }
 
 footer {
+  position: sticky;
+  bottom: 0;
   box-shadow: 0px 0px 3px 0px black;
-  width: 80%;
+  max-width: 60%;
   margin: auto;
   background-color: rgb(216, 214, 214);
   border-radius: 20px;
   padding: 1em;
-  font-size: 1rem;
+  font-size: .6rem;
+  z-index: -1;
 }
 
 footer a {
@@ -60,20 +64,20 @@ footer a {
   font-size: 1.2rem;
 }
 
-footer div{
-    display: flex;
-    justify-content: space-between;
+footer div {
+  display: flex;
+  justify-content: space-between;
 }
-.contatti{
-    right: 0;
-    
+.contatti {
+  right: 0;
 }
-@media screen and (max-width: 437px) {
-  span{
-      display: none;
+@media screen and (max-width: 540px) {
+  span {
+    display: none;
   }
 
-  footer{
-      text-align: left!important;
+  footer {
+    text-align: left !important;
+    max-width: 80%!important;
   }
 }
