@@ -39,9 +39,9 @@ header span {
 main {
   position: relative;
   box-shadow: 0px 0px 3px 0px black;
-  background-color: white;
+  background-color: rgb(253, 251, 246);
   border-radius: 20px;
-  border: solid 1px black;
+  border: solid 1px rgb(26, 26, 26);
   margin-bottom: 10px;
   padding: 0.8em;
   font-size: 1rem;
@@ -95,8 +95,8 @@ footer div {
     width: 90%;
   }
 
-  footer{
-    padding: .5em;
+  footer {
+    padding: 0.5em;
   }
 
   footer a {
@@ -114,7 +114,7 @@ footer div {
     padding-top: 2em;
     padding-bottom: 2em;
   }
-  main{
+  main {
     font-size: 1.8rem;
   }
 }
