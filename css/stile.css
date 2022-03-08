@@ -54,7 +54,7 @@ img {
 }
 
 #competenze img{
-  width: 6em;
+  max-width: 6em;
   display: inline;
 }
 
