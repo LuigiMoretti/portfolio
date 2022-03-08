@@ -53,6 +53,11 @@ img {
   margin: auto;
 }
 
+#competenze img{
+  width: 6em;
+  display: inline;
+}
+
 footer {
   position: sticky;
   bottom: 1px;
