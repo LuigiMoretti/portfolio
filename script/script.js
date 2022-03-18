@@ -2,9 +2,31 @@ cambiaPagina(0);
 
 
 
+$(window).on("resize", function () {
+    if ($("body").width() >= 768) {
+        $("li").children().hide();
+        $("li .active").show();
+        $("header").addClass("compresso");
 
+        $("header").on("mouseover", () => {
+            $("header").removeClass("compresso");
+            setTimeout(() => {
+                $("li").children().show();
+            }, 200);
 
+        });
+        $("header").on("mouseleave", () => {
+            $("li").children().hide();
+            $("li .active").show();
+            $("header").addClass("compresso");
 
+        });
+    } else {
+        $("li").children().show();
+        $("header").removeClass("compresso");
+    }
+    console.log($("body").width());
+});
 
 
 
