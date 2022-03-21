@@ -1,3 +1,7 @@
+div.desktop {
+  display: none;
+}
+
 body {
   padding: 0.2em 0.8em 0.2em 0.8em;
   font-size: 1.4rem;
@@ -5,7 +9,7 @@ body {
 }
 
 header {
- transition-duration:200ms;
+  transition-duration: 200ms;
   box-shadow: 0px 0px 3px 0px black;
   width: 80%;
   margin: auto;
@@ -27,9 +31,11 @@ header span {
 .nav-link {
   color: rgb(78, 78, 78) !important;
 }
+
 .nav-link:hover {
   color: rgb(117, 50, 114) !important;
 }
+
 .nav-link.active {
   background-color: transparent !important;
   border: solid 1px rgb(55, 221, 33);
@@ -37,6 +43,7 @@ header span {
   color: rgb(117, 50, 114) !important;
   box-shadow: 0px 0px 2px 0px white;
 }
+
 main {
   position: relative;
   box-shadow: 0px 0px 3px 0px black;
@@ -54,7 +61,7 @@ img {
   margin: auto;
 }
 
-#competenze img{
+#competenze img {
   max-width: 6em;
   display: inline;
 }
@@ -81,9 +88,11 @@ footer div {
   display: flex;
   justify-content: space-between;
 }
+
 .contatti {
   right: 0;
 }
+
 @media screen and (max-width: 675px) {
   span {
     display: none;
@@ -109,24 +118,37 @@ footer div {
     font-size: 0.8rem;
   }
 }
+
 @media screen and (min-width: 768px) {
   body {
     padding-top: 2em;
     padding-bottom: 2em;
+    font-size: 1.8rem;
   }
 
-  .compresso{
+  main {
+    font-size: 1.3rem;
+  }
+
+  .compresso {
     transition-property: width;
     width: 10%;
     transition-duration: 2000ms;
   }
-}
-@media screen and (min-width: 1440px) {
-  body {
-    padding-top: 2em;
-    padding-bottom: 2em;
+
+  div.smartphone {
+    display: none;
   }
-  main {
-    font-size: 1.8rem;
+
+  main.foto {
+    background-image: url('../images/luigi.jpg');
+    height: 400px;
+    background-size: cover;
   }
+
+  div.desktop {
+    display: block;
+  }
+
+
 }
