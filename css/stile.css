@@ -130,10 +130,9 @@ footer div {
     font-size: 1.3rem;
   }
 
-  .compresso {
-    transition-property: width;
-    width: 10%;
-    transition-duration: 2000ms;
+  main.home {
+    max-height: 400px;
+    overflow: scroll;
   }
 
   div.smartphone {
@@ -144,6 +143,23 @@ footer div {
     background-image: url('../images/luigi.jpg');
     height: 400px;
     background-size: cover;
+    background-position: -130px;
+  }
+
+  hr {
+    margin: 60px 0 60px 0;
+  }
+
+  section.social a, section.contatti a {
+    text-decoration: none;
+  }
+
+  section.social {
+    padding-right: 0 !important;
+  }
+
+  section.contatti {
+    padding-left: 0 !important;
   }
 
   div.desktop {
@@ -151,4 +167,10 @@ footer div {
   }
 
 
+}
+
+@media screen and (min-width: 992px) {
+  main.foto {
+    background-position: 0px;
+  }
 }
