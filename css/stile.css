@@ -132,7 +132,6 @@ footer div {
 
   main.home {
     max-height: 400px;
-    overflow: scroll;
   }
 
   div.smartphone {
@@ -156,10 +155,12 @@ footer div {
 
   section.social {
     padding-right: 0 !important;
+    text-align: center;
   }
 
   section.contatti {
     padding-left: 0 !important;
+    text-align: center;
   }
 
   div.desktop {
@@ -169,8 +170,43 @@ footer div {
 
 }
 
+@media screen and (min-width:768px) and (max-width: 992px) {
+  hr {
+    display: none;
+  }
+
+}
+
 @media screen and (min-width: 992px) {
   main.foto {
     background-position: 0px;
+  }
+}
+
+@media screen and (min-width:992px) {
+  main.foto:hover, main.home:hover, main.progetti:hover, main.contatti:hover {
+    position: inherit;
+    transform: perspective(500px) translateZ(60px);
+    font-size: 1.1rem;
+    transition-duration: .5s;
+  }
+
+  main.foto:hover, main.home:hover, main.progetti:hover, main.contatti:hover {
+    position: inherit;
+    transform: perspective(500px) translateZ(60px);
+    font-size: 1.1rem;
+    transition-duration: .5s;
+  }
+
+  main.progetti {
+    min-height: 360px;
+  }
+
+  main.progetti img {
+    width: 30%;
+  }
+
+  main.progetti:hover img {
+    width: 15%;
   }
 }
