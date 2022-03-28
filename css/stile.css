@@ -204,6 +204,8 @@ footer div {
 
   main.progetti img {
     width: 30%;
+    box-shadow: 0px 0px 2px 1px black;
+    overflow: hidden;
   }
 
   main.progetti:hover img {
