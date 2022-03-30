@@ -131,16 +131,29 @@ footer div {
     font-size: 1.8rem;
   }
 
+  div.desktop {
+    display: block;
+  }
+
+  div.smartphone {
+    display: none;
+  }
+
+  main {
+
+    z-index: 0;
+  }
+
+  main.progetti p#hover {
+    display: none;
+  }
+
   main {
     font-size: 1.3rem;
   }
 
   main.home {
     max-height: 400px;
-  }
-
-  div.smartphone {
-    display: none;
   }
 
   main.foto {
@@ -168,10 +181,6 @@ footer div {
     text-align: center;
   }
 
-  div.desktop {
-    display: block;
-  }
-
 
 }
 
@@ -179,7 +188,6 @@ footer div {
   hr {
     display: none;
   }
-
 }
 
 @media screen and (min-width: 992px) {
@@ -193,10 +201,15 @@ footer div {
     position: inherit;
     transform: perspective(500px) translateZ(60px);
     transition-duration: .5s;
+    z-index: 1;
   }
 
-  main.progetti:hover p {
+  main.progetti:hover p#non-hover {
     display: none;
+  }
+
+  main.progetti:hover p#hover {
+    display: inline;
   }
 
   main.progetti {
@@ -209,7 +222,28 @@ footer div {
     overflow: hidden;
   }
 
+  main.progetti button {
+    display: none;
+  }
+
   main.progetti:hover img {
     width: 25%;
+  }
+
+  main.progetti.cliccato {
+    transform: perspective(500px) translateZ(250px) translateX(165px) translateY(-100px);
+    z-index: 1;
+  }
+
+  main.progetti.cliccato button {
+    display: block;
+  }
+
+  main.progetti.cliccato p {
+    display: none !important;
+  }
+
+  main.progetti.cliccato img {
+    width: 15%;
   }
 }

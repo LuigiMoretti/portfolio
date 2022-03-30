@@ -1,10 +1,19 @@
+
+
 cambiaPagina(0);
 
-
+$('main.progetti').click(function () {
+    console.log()
+    $(this).addClass("cliccato");
+    $(this).parent().css("position", "sticky");
+    $('body').css("overflow", "hidden");
+    $(this).children("button").on("click", () => {
+        $('main.progetti').removeClass('cliccato');
+    })
+})
 
 
 function cambiaPagina(p) {
-    console.log();
     if ($(window).width() < 768) {
 
         switch (p) {
