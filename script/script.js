@@ -1,18 +1,30 @@
 
 
 cambiaPagina(0);
+let classList = $('main.progetti').attr("class").split(/\s+/);
+if (!classList.includes("cliccato")) {
+    $('main.progetti').click(function () {
+        $(this).addClass("cliccato");
+        $('body').css("overflow", "hidden");
+        $('main.progetti').css("overflow", "scroll");
+        console.log("non contiene");
+        $("#chiudi").css("display", "block");
+    });
+}
 
-$('main.progetti').click(function () {
-    console.log()
-    $(this).addClass("cliccato");
-    $(this).parent().css("position", "sticky");
-    $('body').css("overflow", "hidden");
-    $(this).children("button").on("click", () => {
+$("#chiudi").on("click", function () {
+    setTimeout(() => {
         $('main.progetti').removeClass('cliccato');
-    })
-})
+        $('main').addClass("riposiziona");
+        console.log("contiene");
+        $("#chiudi").css("display", "none");
+        $('body').css("overflow", "scroll");
+    }, 20);
+});
 
-
+$("main").on("mouseenter", function () {
+    $("main").removeClass("riposiziona");
+});
 function cambiaPagina(p) {
     if ($(window).width() < 768) {
 

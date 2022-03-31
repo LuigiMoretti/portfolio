@@ -197,6 +197,11 @@ footer div {
 }
 
 @media screen and (min-width:992px) {
+  main {
+    transform: perspective(500px) translateZ(0px);
+    transition-duration: 1s;
+  }
+
   main.foto:hover, main.home:hover, main.progetti:hover, main.contatti:hover {
     position: inherit;
     transform: perspective(500px) translateZ(60px);
@@ -214,6 +219,8 @@ footer div {
 
   main.progetti {
     min-height: 360px;
+    position: relative;
+    z-index: 1;
   }
 
   main.progetti img {
@@ -222,8 +229,14 @@ footer div {
     overflow: hidden;
   }
 
-  main.progetti button {
+  #chiudi {
     display: none;
+    float: right;
+    height: 2vw;
+    width: 2vw;
+    border-style: none;
+    font-size: 1rem;
+    background-color: rgba(0, 0, 0, 0.376);
   }
 
   main.progetti:hover img {
@@ -233,10 +246,9 @@ footer div {
   main.progetti.cliccato {
     transform: perspective(500px) translateZ(250px) translateX(165px) translateY(-100px);
     z-index: 1;
-  }
-
-  main.progetti.cliccato button {
-    display: block;
+    height: 40vh;
+    width: 40vw;
+    overflow: scroll;
   }
 
   main.progetti.cliccato p {
@@ -245,5 +257,9 @@ footer div {
 
   main.progetti.cliccato img {
     width: 15%;
+  }
+
+  main.riposiziona {
+    transform: perspective(500px) translateZ(0px) !important;
   }
 }
