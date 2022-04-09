@@ -1,8 +1,11 @@
 cambiaPagina("home");
 
+$("body").css("overflow", "hidden");
 
-
-
+function mostraPortfolio() {
+    $("body").css("overflow", "scroll");
+    $("#inSviluppo").fadeOut(500);
+}
 
 let classList = $('main.progetti').attr("class").split(/\s+/);
 if (!classList.includes("cliccato")) {
