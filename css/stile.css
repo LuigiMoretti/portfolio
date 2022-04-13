@@ -4,11 +4,26 @@ div.desktop {
 
 #inSviluppo {
   position: absolute;
-  height: 100vh;
+  height: 200vh;
   width: 99vw;
-  z-index: 4;
+  z-index: 2;
   background-color: rgba(226, 203, 172, 0.87);
   top: 0;
+  padding: 1em;
+}
+
+#inSviluppo button {
+  border-radius: 30px;
+  margin-left: 2px;
+  opacity: 0.5;
+  transition-property: opacity;
+  transition-duration: 100ms;
+
+}
+
+#inSviluppo button:hover {
+  opacity: 1;
+  transform: perspective(500px) translateZ(15px);
 }
 
 body {
@@ -77,6 +92,7 @@ main {
 img {
   border-radius: 20px;
   margin: auto;
+  margin-top: 7px;
 }
 
 #comp img, #competenze img {
@@ -228,8 +244,10 @@ footer div {
 
   main.progetti {
     min-height: 360px;
+    max-height: 360px;
     position: relative;
     z-index: 1;
+    overflow: hidden;
   }
 
   main.progetti img {
