@@ -271,10 +271,10 @@ footer div {
   }
 
   main.progetti.cliccato {
-    transform: perspective(500px) translateZ(250px) translateX(175px) translateY(-100px);
+    transform: perspective(500px) translateZ(20vh) translateX(14vw) translateY(-19vh);
     z-index: 1;
-    height: 40vh;
-    width: 40vw;
+    height: 70vh;
+    width: 50vw;
     overflow: scroll;
   }
 
